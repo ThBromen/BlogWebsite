@@ -3,14 +3,19 @@ import { Link } from 'react-router-dom';
 import PostAuthor from './PostAuthor'; // Make sure the path is correct
 
 const PostItem = ({ id, thumbnail, category, title, description, authorId }) => {
+  const shortDescription = description.length > 145 ? description.substr(0, 145) + '...' : description;
+  const shortTitle = title.length > 30 ? title.substr(0, 30) + '...' : title;
+  
   return (
     <article className='post'>
       <div className='post__thumbnail'>
         <img src={thumbnail} alt={title} />
       </div>
       <div className='post__content'>
-        <Link to={`/posts/${id}`}><h3>{title}</h3></Link>
-        <p>{description}</p>
+        <Link to={`/posts/${id}`}>
+        <h3>{shortTitle}</h3>
+        </Link>
+        <p>{shortDescription}</p>
         <div className='post__footer'>
           <PostAuthor authorId={authorId} />
           <Link to={`/posts/category/${category}`} className='btn category'>{category}</Link>
@@ -19,5 +24,4 @@ const PostItem = ({ id, thumbnail, category, title, description, authorId }) => 
     </article>
   );
 };
-
 export default PostItem;
