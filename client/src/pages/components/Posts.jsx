@@ -16,7 +16,7 @@ const dummyPosts = [
     description: 'Smart farming involves the use of technologies like IoT, AI, and drones to improve agricultural practices. This post explores the latest advancements and their potential impacts on the industry...',
     authorId: 101,
   },
-  {
+  { 
     id: 2,
     thumbnail: education,
     category: 'Education',
@@ -63,6 +63,7 @@ const Posts = () => {
 
   return (
     <section className='posts'>
+      <div className='container posts__container'>
       {posts.map(({ id, thumbnail, category, title, description, authorId }) => (
         <PostItem
           key={id}
@@ -74,6 +75,7 @@ const Posts = () => {
           authorId={authorId}
         />
       ))}
+      </div>
     </section>
   );
 };

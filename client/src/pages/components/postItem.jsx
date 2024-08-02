@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import postAuthor from './postAuthor';
-
-
+import PostAuthor from './PostAuthor'; // Make sure the path is correct
 
 const PostItem = ({ id, thumbnail, category, title, description, authorId }) => {
   return (
@@ -11,14 +9,13 @@ const PostItem = ({ id, thumbnail, category, title, description, authorId }) => 
         <img src={thumbnail} alt={title} />
       </div>
       <div className='post__content'>
-        <Link to={`/post/${id}`}><h3>{title}</h3></Link>
+        <Link to={`/posts/${id}`}><h3>{title}</h3></Link>
         <p>{description}</p>
         <div className='post__footer'>
-          <postAuthor/>
-          <Link to={`/posts/category/${category}`}>{category}</Link>
+          <PostAuthor authorId={authorId} />
+          <Link to={`/posts/category/${category}`} className='btn category'>{category}</Link>
         </div>
-      </div> 
-
+      </div>
     </article>
   );
 };
