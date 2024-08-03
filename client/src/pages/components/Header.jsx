@@ -14,7 +14,7 @@ const Header = () => {
      <img src={logo} alt="Navbar Logo" />
       </Link>
       <ul className='nav__menu'>
-        <li> <Link to="/profile"> QR Achiver</Link></li>
+        <li> <Link to="/profile/rew"> QR Achiver</Link></li>
         <li> <Link to="/create"> Create Post</Link></li>
         <li> <Link to="/authors"> Authors</Link></li>
         <li> <Link to="/logout"> Logout</Link></li>
