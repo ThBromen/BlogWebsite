@@ -1,42 +1,32 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import postAuthor from './components/PostAuthor'
-import Thumnail from '../images/art.jpg'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import PostAuthor from './components/PostAuthor'; // Corrected component name to be capitalized
+import { dummyPosts } from '../data'; // Import dummyPosts to get post data
+import Thumbnail from '../images/art.jpg'; // Corrected the spelling of 'Thumbnail'
+
 const PostDetail = () => {
+  // Assuming you want to use the first post for demonstration; replace with actual logic as needed
+  const post = dummyPosts[0];
+
   return (
-    <section  className='post-detail'>
+    <section className='post-detail'>
       <div className='container post-detail__container'>
-        <div className='post-detail__header'> 
-          <postAuthor/>
+        <div className='post-detail__header'>
+          <PostAuthor authorId={post.authorId} /> {/* Pass the authorId to PostAuthor */}
           <div className='post-detail__buttons'>
-            <Link to={'/post/werwer/edit'} className='btn sm primary'>Edit</Link>
-            <Link to={'post/werwer/delete'} className='btn sm danger'>Delete</Link>
+            <Link to={`/post/${post.id}/edit`} className='btn sm primary'>Edit</Link>
+            <Link to={`/post/${post.id}/delete`} className='btn sm danger'>Delete</Link>
           </div>
         </div>
-<h1>This is a post Title</h1>
-<div className='post-detail__thumail'>
-  <img src={Thumnail} alt="" />
-</div>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, accusantium sequi rerum
-     inventore eum fuga rem cum ex eaque id corrupti itaque deleniti nostrum repellat eligendi 
-     aspernatur blanditiis laborum a praesentium aliquam aliquid odio! Beatae neque porro tenetur 
-     sed? Architecto.</p>
-     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam tenetur nulla eligendi 
-      voluptates mollitia non accusantium possimus, id esse quam quisquam reprehenderit nam veniam
-       quaerat libero voluptatem, rem adipisci et optio a? Voluptates accusantium repellat quas reprehenderit 
-       libero laudantium! Ipsa incidunt commodi dolore tempore cumque exercitationem quos fuga consectetur quo.
-     </p>
-     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa eveniet eos perspiciatis necessitatibus?
-       Quos nulla tempora totam? Ut pariatur voluptatum doloribus fugiat earum, id excepturi corrupti inventore 
-       omnis iste doloremque deleniti hic vel ducimus eaque debitis soluta deserunt architecto facilis ea ratione
-        voluptates? Amet qui explicabo praesentium aut tempora cumque id impedit totam maxime facilis molestiae 
-        aliquid ratione quia esse, commodi pariatur laborum ad, doloremque suscipit quod? Similique, nostrum perspiciatis?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, obcaecati ratione tempora fugit,
-         quas tempore voluptatem sit quod nihil repellendus unde officia!</p>
+        <h1>{post.title}</h1> {/* Display post title */}
+        <div className='post-detail__thumbnail'> {/* Corrected spelling to 'thumbnail' */}
+          <img src={Thumbnail} alt="Post Thumbnail" /> {/* Updated alt text */}
+        </div>
+        <p>{post.description}</p> {/* Display post description */}
+        {/* Additional content can be added here */}
       </div>
-      
     </section>
-  )
-}
+  );
+};
 
-export default PostDetail 
+export default PostDetail;
