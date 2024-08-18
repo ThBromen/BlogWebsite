@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PostAuthor from './components/PostAuthor'; // Assuming the correct path
+import PostAuthor from './components/PostAuthor';
 import { dummyPosts } from '../data';
 import Thumbnail from '../images/art.jpg';
 
@@ -11,7 +11,13 @@ const PostDetail = () => {
     <section className='post-detail'>
       <div className='container post-detail__container'>
         <div className='post-detail__header'>
-          <PostAuthor /> {/* PostAuthor component without props */}
+          {/* Pass the necessary props to PostAuthor */}
+          <PostAuthor 
+            name={post.authorName} 
+            avatarUrl={post.authorAvatar} 
+            time={post.time} 
+            authorId={post.authorId} 
+          />
           <div className='post-detail__buttons'>
             <Link to={`/post/${post.id}/edit`} className='btn sm primary'>Edit</Link>
             <Link to={`/post/${post.id}/delete`} className='btn sm danger'>Delete</Link>
