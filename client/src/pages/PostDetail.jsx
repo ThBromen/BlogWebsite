@@ -31,5 +31,4 @@ const PostDetail = () => {
     </section>
   );
 };
-
 export default PostDetail;
