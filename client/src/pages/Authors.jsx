@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Author1 from '../images/author1.jpg';
+import Author1 from '../images/author1.jpg'; // Corrected capitalization to match the file names
 import Author2 from '../images/author2.jpg';
-import Author3 from '../images/author3.jpg'; // Corrected capitalization to match the import
+import Author3 from '../images/Author3.jpg'; // Corrected capitalization to match the file name
 import Author4 from '../images/author4.jpg';
 import Author5 from '../images/author5.jpg';
 import Author6 from '../images/author6.jpg';
