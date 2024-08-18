@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Author1 from "../images/author1.jpg";
-import Author2 from "../images/author2.jpg";
-import Author3 from "../images/Author3.jpg";
-import Author4 from "../images/author4.jpg";
-import Author5 from "../images/author5.jpg";
-import Author6 from "../images/author6.jpg";
+import Author1 from '../images/author1.jpg';
+import Author2 from '../images/author2.jpg';
+import Author3 from '../images/author3.jpg'; // Corrected capitalization to match the import
+import Author4 from '../images/author4.jpg';
+import Author5 from '../images/author5.jpg';
+import Author6 from '../images/author6.jpg';
 import { Link } from 'react-router-dom';
 
 const authorData = [
@@ -17,7 +17,7 @@ const authorData = [
 ];
 
 const Authors = () => {
-  const [authors, setAuthors] = useState(authorData);
+  const [authors] = useState(authorData); // No need for setAuthors since you're not modifying the state
 
   return (
     <section className='authors'>
