@@ -18,8 +18,8 @@ const PostDetail = () => {
             authorId={post.authorId} 
           />
           <div className='post-detail__buttons'>
-            <Link to={`/post/${post.id}/edit`} className='btn sm primary'>Edit</Link>
-            <Link to={`/post/${post.id}/delete`} className='btn sm danger'>Delete</Link>
+            <Link to={`/post/wewe/edit`} className='btn sm primary'>Edit</Link>
+            <Link to={`/post/wewe/delete`} className='btn sm danger'>Delete</Link>
           </div>
         </div>
         <h1>{post.title}</h1>
