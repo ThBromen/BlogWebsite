@@ -24,7 +24,7 @@ const Header = () => {
      <img src={logo} alt="Navbar Logo" />
       </Link>
        {isNavShowing && <ul className='nav__menu'>
-        <li> <Link to="/profile/rew" onClick={closeNavHandler}> QR Achiver</Link></li>
+        <li> <Link to="/profile/rew" onClick={closeNavHandler}> Bromen Achiver</Link></li>
         <li> <Link to="/create" onClick={closeNavHandler}> Create Post</Link></li>
         <li> <Link to="/authors" onClick={closeNavHandler}> Authors</Link></li>
         <li> <Link to="/logout" onClick={closeNavHandler}> Logout</Link></li>

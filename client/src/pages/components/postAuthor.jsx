@@ -14,5 +14,4 @@ const PostAuthor = ({ name, avatarUrl, time, authorId }) => {
     </Link>
   );
 };
-
 export default PostAuthor;
